@@ -1,0 +1,8 @@
+Source: uas-dkms
+Maintainer: Fabian Ritzmann <frtrack-github@yahoo.com>
+Build-Depends: debhelper (>= 9), dkms
+
+Package: uas-dkms
+Architecture: all
+Depends: ${misc:Depends}
+Description: DKMS source for the USB Attached SCSI driver

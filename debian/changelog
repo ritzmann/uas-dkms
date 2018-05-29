@@ -1,0 +1,5 @@
+uas-dkms (3.16-0) jessie; urgency=medium
+
+  * Initial package.
+
+ -- Fabian Ritzmann <frtrack-github@yahoo.com>  Tue, 29 May 2018 22:20:00 +0200
