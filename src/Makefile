@@ -7,5 +7,5 @@
 
 ccflags-y := -Idrivers/scsi
 
-obj-y		+= uas.o
+obj-m		+= uas.o
 
