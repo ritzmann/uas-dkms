@@ -1,3 +1,9 @@
+uas-dkms (3.16-1) jessie; urgency=medium
+
+  * Add usb-storage, the default usb-storage will not load the UAS driver
+
+ -- Fabian Ritzmann <frtrack-github@yahoo.com>  Tue, 02 June 2018 10:20:00 +0200
+
 uas-dkms (3.16-0) jessie; urgency=medium
 
   * Initial package.
