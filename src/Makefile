@@ -5,6 +5,8 @@
 # Rewritten to use lists instead of if-statements.
 #
 
+CONFIG_USB_UAS=m
+
 ccflags-y := -Idrivers/scsi
 
 obj-m		+= uas.o
