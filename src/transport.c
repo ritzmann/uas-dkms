@@ -61,7 +61,7 @@
 #include "debug.h"
 
 #include <linux/blkdev.h>
-#include "../scsi/sd.h"
+#include "sd.h"
 
 
 /***********************************************************************
