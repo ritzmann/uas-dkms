@@ -72,9 +72,7 @@
 #include "sierra_ms.h"
 #include "option_ms.h"
 
-#if IS_ENABLED(CONFIG_USB_UAS)
 #include "uas-detect.h"
-#endif
 
 /* Some informational data */
 MODULE_AUTHOR("Matthew Dharm <mdharm-usb@one-eyed-alien.net>");
@@ -1058,17 +1056,19 @@ static int storage_probe(struct usb_interface *intf,
 	int size;
 
 	/* If uas is enabled and this device can do uas then ignore it. */
-#if IS_ENABLED(CONFIG_USB_UAS)
+        dev_info(&intf->dev, "Before uas_use_uas_driver");
 	if (uas_use_uas_driver(intf, id, NULL))
 		return -ENXIO;
-#endif
+        dev_info(&intf->dev, "After uas_use_uas_driver");
 
 	/*
 	 * If the device isn't standard (is handled by a subdriver
 	 * module) then don't accept it.
 	 */
+        dev_info(&intf->dev, "Before usb_usual_ignore_device");
 	if (usb_usual_ignore_device(intf))
 		return -ENXIO;
+        dev_info(&intf->dev, "After usb_usual_ignore_device");
 
 	/*
 	 * Call the general probe procedures.
